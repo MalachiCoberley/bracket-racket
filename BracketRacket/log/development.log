@@ -110,3 +110,290 @@ Migrating to CreateUsers (20230120235827)
   [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
   [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(4881488833955526555)[0m
   [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/users/new" for ::1 at 2023-01-21 21:27:53 -0700
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 10.0ms | Allocations: 5875)
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | Allocations: 5985)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 9.5ms | Allocations: 14779)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass
+
+'.freeze;     @article.errors.full_messages_for(:username).each do |message| 
+                      ^^^^^^^):
+    4:   <div>
+    5:     <%= form.label :username %><br>
+    6:     <%= form.text_field :username %>
+    7:     <% @article.errors.full_messages_for(:username).each do |message| %>
+    8:       <div><%= message %></div>
+    9:     <% end %>
+   10:   </div>
+  
+app/views/users/new.html.erb:7
+app/views/users/new.html.erb:3
+Started GET "/users/new" for ::1 at 2023-01-21 21:28:08 -0700
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1360)
+  Rendered layout layouts/application.html.erb (Duration: 33.7ms | Allocations: 36489)
+Completed 200 OK in 38ms (Views: 35.1ms | ActiveRecord: 0.0ms | Allocations: 37376)
+
+
+Started POST "/users" for ::1 at 2023-01-21 21:28:12 -0700
+Processing by UsersController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"h"}, "commit"=>"Create User"}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms | Allocations: 890)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: username):
+  
+app/controllers/users_controller.rb:29:in `user_params'
+app/controllers/users_controller.rb:17:in `create'
+Started GET "/users/new" for ::1 at 2023-01-21 21:28:13 -0700
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 0.8ms | Allocations: 828)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | Allocations: 3142)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.0ms | Allocations: 3457)
+
+
+Started POST "/users" for ::1 at 2023-01-21 21:28:34 -0700
+Processing by UsersController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"Malachi"}, "commit"=>"Create User"}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms | Allocations: 741)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: username):
+  
+app/controllers/users_controller.rb:29:in `user_params'
+app/controllers/users_controller.rb:17:in `create'
+Started GET "/users/new" for ::1 at 2023-01-21 21:28:34 -0700
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 767)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | Allocations: 2974)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.0ms | Allocations: 3250)
+
+
+Started POST "/users" for ::1 at 2023-01-21 21:29:11 -0700
+Processing by UsersController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"d"}, "commit"=>"Create User"}
+Completed 400 Bad Request in 3ms (ActiveRecord: 0.0ms | Allocations: 738)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: username):
+  
+app/controllers/users_controller.rb:29:in `user_params'
+app/controllers/users_controller.rb:17:in `create'
+Started GET "/users/new" for ::1 at 2023-01-21 21:29:12 -0700
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 0.7ms | Allocations: 761)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | Allocations: 2968)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.0ms | Allocations: 3245)
+
+
+Started POST "/users" for ::1 at 2023-01-21 21:32:09 -0700
+Processing by UsersController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"Boiiiiii"}, "commit"=>"Create User"}
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.0ms | Allocations: 733)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: username):
+  
+app/controllers/users_controller.rb:29:in `user_params'
+app/controllers/users_controller.rb:17:in `create'
+Started GET "/users/new" for ::1 at 2023-01-21 21:32:09 -0700
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 761)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | Allocations: 2968)
+Completed 200 OK in 2ms (Views: 2.1ms | ActiveRecord: 0.0ms | Allocations: 3240)
+
+
+Started POST "/users" for ::1 at 2023-01-21 21:33:43 -0700
+Processing by UsersController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"s"}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 1382)
+
+
+  
+TypeError (no implicit conversion of Symbol into Integer):
+  
+app/controllers/users_controller.rb:29:in `[]'
+app/controllers/users_controller.rb:29:in `user_params'
+app/controllers/users_controller.rb:17:in `create'
+Started GET "/users/new" for ::1 at 2023-01-21 21:36:00 -0700
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 2526)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | Allocations: 2614)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 6.4ms | Allocations: 6288)
+
+
+  
+ActionView::Template::Error (undefined method `humanize' for nil:NilClass
+
+      defaults << attribute.humanize
+                           ^^^^^^^^^):
+    2: 
+    3: <%= form_with model: @user do |form| %>
+    4:   <div>
+    5:     <%= form.label @user[:username] %><br>
+    6:     <%= form.text_field @user[:username] %>
+    7:     <% @user.errors.full_messages_for(@user[:username]).each do |message| %>
+    8:       <div><%= message %></div>
+  
+app/views/users/new.html.erb:5
+app/views/users/new.html.erb:3
+Started GET "/users/new" for ::1 at 2023-01-21 21:36:31 -0700
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 8.4ms | Allocations: 4983)
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 5071)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms | Allocations: 5875)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user' for #<ActionView::Base:0x000000000145a0>
+
+    '.freeze;@output_buffer.append=( form.label user[:username] );@output_buffer.safe_append='<br>
+                                                ^^^^
+Did you mean?  @user):
+    2: 
+    3: <%= form_with model: @user do |form| %>
+    4:   <div>
+    5:     <%= form.label user[:username] %><br>
+    6:     <%= form.text_field user[:username] %>
+    7:     <% @user.errors.full_messages_for(user[:username]).each do |message| %>
+    8:       <div><%= message %></div>
+  
+app/views/users/new.html.erb:5
+app/views/users/new.html.erb:3
+Started GET "/users/new" for ::1 at 2023-01-21 21:36:45 -0700
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1251)
+  Rendered layout layouts/application.html.erb (Duration: 16.3ms | Allocations: 15270)
+Completed 200 OK in 25ms (Views: 22.4ms | ActiveRecord: 0.0ms | Allocations: 16114)
+
+
+Started GET "/users/new" for ::1 at 2023-01-21 21:36:55 -0700
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 758)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 2950)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.0ms | Allocations: 3249)
+
+
+Started GET "/users/new" for ::1 at 2023-01-21 21:41:55 -0700
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1231)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | Allocations: 3788)
+Completed 200 OK in 7ms (Views: 5.7ms | Allocations: 4591)
+
+
+Started GET "/users/new" for ::1 at 2023-01-21 21:42:27 -0700
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1159)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 3716)
+Completed 200 OK in 7ms (Views: 6.1ms | Allocations: 4545)
+
+
+Started GET "/users/new" for ::1 at 2023-01-21 21:42:58 -0700
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 8.9ms | Allocations: 4738)
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | Allocations: 4826)
+Completed 500 Internal Server Error in 15ms (Allocations: 5627)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `username' for #<ActionView::Base:0x00000000014b40>
+
+'.freeze;@output_buffer.append=  form_with model: @user[username] do |form| @output_buffer.safe_append='
+                                                        ^^^^^^^^
+Did you mean?  user_path):
+    1: <h1>New User</h1>
+    2: 
+    3: <%= form_with model: @user[username] do |form| %>
+    4:   <div>
+    5:     <%= form.label :username %><br>
+    6:     <%= form.text_field :username %>
+  
+app/views/users/new.html.erb:3
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (5.9ms)[0m  [1m[32mINSERT INTO "users" ("username", "team_id", "current_season", "league_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "Malachi"], ["team_id", nil], ["current_season", nil], ["league_id", nil], ["created_at", "2023-01-22 04:46:20.282659"], ["updated_at", "2023-01-22 04:46:20.282659"]]
+  [1m[36mTRANSACTION (6.4ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/users/new" for ::1 at 2023-01-21 21:49:02 -0700
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 1261)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 15281)
+Completed 200 OK in 21ms (Views: 9.2ms | ActiveRecord: 4.9ms | Allocations: 21602)
+
+
+Started POST "/users" for ::1 at 2023-01-21 21:49:09 -0700
+Processing by UsersController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"Malaboii"}, "commit"=>"Create User"}
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.0ms | Allocations: 783)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: username):
+  
+app/controllers/users_controller.rb:29:in `user_params'
+app/controllers/users_controller.rb:17:in `create'
+Started GET "/users/new" for ::1 at 2023-01-21 21:49:09 -0700
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 0.7ms | Allocations: 755)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | Allocations: 2962)
+Completed 200 OK in 2ms (Views: 2.2ms | ActiveRecord: 0.0ms | Allocations: 3256)
+
+
+Started POST "/users" for ::1 at 2023-01-21 21:51:05 -0700
+Processing by UsersController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"Malacboii"}, "commit"=>"Create User"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "team_id", "current_season", "league_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "Malacboii"], ["team_id", nil], ["current_season", nil], ["league_id", 801496021], ["created_at", "2023-01-22 04:51:05.501588"], ["updated_at", "2023-01-22 04:51:05.501588"]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 14ms (ActiveRecord: 8.6ms | Allocations: 6960)
+
+
+Started GET "/users/2" for ::1 at 2023-01-21 21:51:05 -0700
+Processing by UsersController#show as TURBO_STREAM
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 0.6ms | Allocations: 2814)
+
+
