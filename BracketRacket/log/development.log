@@ -397,3 +397,130 @@ Processing by UsersController#show as TURBO_STREAM
 Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 0.6ms | Allocations: 2814)
 
 
+Started GET "/" for ::1 at 2023-01-23 14:44:15 -0700
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 285)
+  Rendered layout layouts/application.html.erb (Duration: 22.8ms | Allocations: 35928)
+Completed 200 OK in 26ms (Views: 23.9ms | ActiveRecord: 0.0ms | Allocations: 38929)
+
+
+Started GET "/" for ::1 at 2023-01-24 12:13:08 -0700
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 9)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 2581)
+Completed 200 OK in 8ms (Views: 6.6ms | Allocations: 2900)
+
+
+Started GET "/" for ::1 at 2023-01-24 12:17:38 -0700
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 10.8ms | Allocations: 11542)
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | Allocations: 11641)
+Completed 500 Internal Server Error in 14ms (Allocations: 12445)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Bracket Racket</h1>
+<%= link_to "Create A New League", user_path(@user:create)%>
+<p>Create A New Team</p>
+<p>Continue An Existing Season</p>
+
+):
+1:    <h1>Bracket Racket</h1>
+2:    <%= link_to "Create A New League", user_path(@user:create)%>
+3:    <p>Create A New Team</p>
+4:    <p>Continue An Existing Season</p>
+  
+app/views/home/index.html.erb:2: syntax error, unexpected ':', expecting ')'
+app/views/home/index.html.erb:2: syntax error, unexpected ':', expecting ')'
+app/views/home/index.html.erb:2: syntax error, unexpected ':', expecting ')'
+app/views/home/index.html.erb:2: syntax error, unexpected ':', expecting ')'
+app/views/home/index.html.erb:2: syntax error, unexpected ':', expecting ')'
+app/views/home/index.html.erb:2: syntax error, unexpected ':', expecting ')'
+Started GET "/" for ::1 at 2023-01-24 12:18:39 -0700
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 1118)
+  Rendered layout layouts/application.html.erb (Duration: 0.8ms | Allocations: 1208)
+Completed 500 Internal Server Error in 3ms (Allocations: 1991)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Bracket Racket</h1>
+<%= link_to "Create A New League", user_path(@user :create)%>
+<p>Create A New Team</p>
+<p>Continue An Existing Season</p>
+
+):
+1:    <h1>Bracket Racket</h1>
+2:    <%= link_to "Create A New League", user_path(@user :create)%>
+3:    <p>Create A New Team</p>
+4:    <p>Continue An Existing Season</p>
+  
+app/views/home/index.html.erb:2: syntax error, unexpected ':', expecting ')'
+app/views/home/index.html.erb:2: syntax error, unexpected ':', expecting ')'
+app/views/home/index.html.erb:2: syntax error, unexpected ':', expecting ')'
+app/views/home/index.html.erb:2: syntax error, unexpected ':', expecting ')'
+app/views/home/index.html.erb:2: syntax error, unexpected ':', expecting ')'
+app/views/home/index.html.erb:2: syntax error, unexpected ':', expecting ')'
+Started GET "/" for ::1 at 2023-01-24 12:18:40 -0700
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 1078)
+  Rendered layout layouts/application.html.erb (Duration: 0.6ms | Allocations: 1159)
+Completed 500 Internal Server Error in 1ms (Allocations: 1413)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Bracket Racket</h1>
+<%= link_to "Create A New League", user_path(@user :create)%>
+<p>Create A New Team</p>
+<p>Continue An Existing Season</p>
+
+):
+1:    <h1>Bracket Racket</h1>
+2:    <%= link_to "Create A New League", user_path(@user :create)%>
+3:    <p>Create A New Team</p>
+4:    <p>Continue An Existing Season</p>
+  
+app/views/home/index.html.erb:2: syntax error, unexpected ':', expecting ')'
+app/views/home/index.html.erb:2: syntax error, unexpected ':', expecting ')'
+app/views/home/index.html.erb:2: syntax error, unexpected ':', expecting ')'
+app/views/home/index.html.erb:2: syntax error, unexpected ':', expecting ')'
+app/views/home/index.html.erb:2: syntax error, unexpected ':', expecting ')'
+app/views/home/index.html.erb:2: syntax error, unexpected ':', expecting ')'
+Started GET "/" for ::1 at 2023-01-24 12:20:46 -0700
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 789)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | Allocations: 3573)
+Completed 200 OK in 6ms (Views: 5.0ms | Allocations: 4354)
+
+
+Started GET "/users/new" for ::1 at 2023-01-24 12:20:48 -0700
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 9.3ms | Allocations: 2639)
+  Rendered layout layouts/application.html.erb (Duration: 12.7ms | Allocations: 5046)
+Completed 200 OK in 76ms (Views: 14.1ms | ActiveRecord: 31.0ms | Allocations: 14517)
+
+
+Started GET "/" for ::1 at 2023-01-24 12:21:05 -0700
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 283)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 3082)
+Completed 200 OK in 7ms (Views: 4.9ms | ActiveRecord: 0.0ms | Allocations: 3924)
+
+
